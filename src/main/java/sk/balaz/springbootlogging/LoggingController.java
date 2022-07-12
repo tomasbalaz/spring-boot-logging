@@ -17,7 +17,7 @@ public class LoggingController {
 
     @GetMapping("/hello")
     public Map<String, String> logging(@RequestParam(defaultValue = "World") String name) {
-        LOGGER.info("Name {}", name);
+        LOGGER.trace("Name {}", name);
         return Map.of("Greeting", "Hello" + name);
     }
 
